@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EduGenie — AI Learning Assistant</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="container">
+      <div class="brand">EduGenie ✦</div>
+      <h1>Your personal AI tutor for learning support.</h1>
+      <p>Ask questions, understand difficult topics, summarize notes, generate quizzes, or build a learning path.</p>
+    </div>
+  </header>
+
+  <main class="container grid">
+    <section class="card">
+      <h2>Ask EduGenie a Question</h2>
+      <textarea id="qna-input" rows="4" placeholder="Why is the sky blue?"></textarea>
+      <button data-action="qna">Ask</button>
+      <div id="qna-result" class="result"></div>
+    </section>
+
+    <section class="card">
+      <h2>Need an Explanation?</h2>
+      <div class="inline">
+        <input id="explain-input" placeholder="e.g. Photosynthesis">
+        <button data-action="explain">Explain</button>
+      </div>
+      <div id="explain-result" class="result"></div>
+    </section>
+
+    <section class="card">
+      <h2>Summarize a Paragraph</h2>
+      <textarea id="summary-input" rows="6" placeholder="Paste your study notes here..."></textarea>
+      <button data-action="summarize">Summarize</button>
+      <div id="summary-result" class="result"></div>
+    </section>
+
+    <section class="card">
+      <h2>Generate a Quiz</h2>
+      <textarea id="quiz-input" rows="6" placeholder="Paste a lesson or paragraph here..."></textarea>
+      <button data-action="quiz">Generate Quiz</button>
+      <div id="quiz-result" class="result"></div>
+    </section>
+
+    <section class="card">
+      <h2>Build a Learning Path</h2>
+      <div class="inline">
+        <input id="learn-input" placeholder="e.g. SQL">
+        <button data-action="learn">Recommend</button>
+      </div>
+      <div id="learn-result" class="result"></div>
+    </section>
+  </main>
+
+  <footer class="container footer">
+    <span>EduGenie</span>
+    <a href="/docs" target="_blank" rel="noreferrer">API docs</a>
+    <span id="status">Checking API…</span>
+  </footer>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
